@@ -5,6 +5,21 @@
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
+    ],
+    "headers": [{
+      "source" : "/__images",
+      "headers" : [ {
+      "key" : "Cache-Control",
+      "value" : "max-age=300"
+      } ]
+    },
+    {
+    "source" : "/theme",
+    "headers" : [ {
+    "key" : "Cache-Control",
+    "value" : "max-age=300"
+    } ]
+    }
     ]
   }
 }
