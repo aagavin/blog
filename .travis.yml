@@ -7,14 +7,14 @@ cache:
     - "node_modules"
 python:
   - '3.6'
-node_js:
-  - "node"
+#node_js:
+#  - "node"
 install: pip install -r requirements.txt
 script:
   - pelican content/
-after_script:
-  - npm install -g firebase-tools
-  - firebase deploy --token "$FIREBASE_TOKEN"
+#after_script:
+#  - npm install -g firebase-tools
+#  - firebase deploy --token "$FIREBASE_TOKEN"
 env:
   global:
   - secure: W25DL8l11DJzkqRsdxgZB0Uy079SPtJWB1gx550Ygl3rHID9+U2mKEjvTT7bap35ZQORHQNFJt65dj2ZZfCjDAQR8XcYeFqd+LvQmn3BqJQmp+2Cf32gqlNL+Q953Eneeb2Z5Ysmc7mwXfCtWnGmsBpxOQdXbvQI/dWyChIURt+j3kvRfdlJcR6SMSbM9z73ngJBltwt7opOUc5pCy8v6jAdFrNcBQtLnT02L9IVUKj6bd6f2JnRMxp1jKPUL5Ic6Vnou1Boveg26k5MG9wLzy9X9r23GZd6te0OxI4IAebjKpOsE7QTJ1dVJ8fX24+vM7k82yA4TgTOpHjV+zuFKQkeU6Zf9SajtXjvDEcP8m6bRwdGev1mmtiMljgyvwHu9GeAe2KRbYdmc0a78FtjeJnY7oMk7/nmIRlhys0t7IR11Ja95B2wed/z5feLzddn6OE2Gyk84RiPwkcspLq6JSypszNexk0l/+304JvFOIey/8kUgcP+PSXoBAQbXf6mSOWKQwiIKKj1IDlVTeBAWyoX4aM7eEhdZOO+yYa8lIOJVKWQOObilK7echKF3hWj9Uz7ffrh7g2ZA4j9oH1tiuYDK0Ge8Ofq6FXElbRM5Yg08n+n7or1zZ8M24FTlIcQvbXK8iRHzfsbTPguS9TizdQHE605qvw5FUSG/M2jibA=
