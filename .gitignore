@@ -65,5 +65,8 @@ instance/
 venv/
 ENV/
 
+.idea/*
+output
+
 # Themes
 pelican-themes
