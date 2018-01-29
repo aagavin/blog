@@ -11,6 +11,3 @@ deploy:
   token:
     secure: "Yq+E3VicauOwIU8nsM1yHoKxaZiF34cC5C6Hdia9wyEmmHMCbXI1icRddEIT9IX0WrcY18eJISwGSdgI57wB+QC29YYiuNIEjBUU0hsDKmmI3tHz2KBKHeJAUcV8Hsao9Oz0riNsXTAGv6Fs2ioTDx28XQRPe7PNnFXzslyttbgaRirBYBH4PC6R8JSiUHgIeXr3Ksz+k1tShiCOEMBl2tYspDdv0Fe2gE+sd+CPm/sADaM2UXyuniuHMENByo8wJc6W2uyJhS8k9aEffpUbggaIK+apT837/hY2pgWoT/Yacai4PTAu/xmZImDD4Tk4rMg29D48bG9NLCGec9P4Bts6UxnJhUy5S+/GnycGzXl6GXIwH61KbJqUQQ9swszcL06X6JQdEttbtmZ2yr+8QC9pwO/rLYKpJO2bsf3DxSABPl4GxXjZuKpiS/JVy8ZZrnGLBzuNv0VYJwcQpZeIAFgTUcLJ8LueYxcpo6xEDbL/I/ItLC7Jb+JjC8UVO4XZSDRTDvKGhHvgyCiZGQH+F/K+KTissJRnnY8vdgGNzhNyTHaF3jsAwIpjMv29PP4xJkPITqzjjde5MeyNAwo71080OEaOzkg2nna2aRyUS12Eg2KH/MxfokKLn28b5MUt0uRAPZB1frf08Y1g6kQ9QxZqxg2DXi4ZtvGIFfFuSlg="
   project: "favmovieangular-pure"
-#env:
-#  global:
-#    - secure:
