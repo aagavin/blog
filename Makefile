@@ -69,6 +69,8 @@ else
 endif
 
 publish:
+	@echo $(OUTPUTDIR)
+	@echo $(PUBLISHCONF)
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(PUBLISHCONF) $(PELICANOPTS)
 
 
