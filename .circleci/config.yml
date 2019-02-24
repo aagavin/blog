@@ -25,14 +25,11 @@ jobs:
             pip install -r requirements.txt
       - run: git submodule sync --recursive
       - run: git submodule update --recursive --init
-      - run: ls
-      - run: pwd
-      - run: ls -la theme/pelican-blueidea
       - run:
           name: generate files
           command: |
             . venv/bin/activate
-            pelican content -o output -s publishconf.py
+            make publish
       - run:
           name: install firebase tools
           command: npm install -g firebase-tools
