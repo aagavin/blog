@@ -23,6 +23,8 @@ jobs:
             python3 -m venv venv
             . venv/bin/activate
             pip install -r requirements.txt
+      - run: git submodule sync --recursive
+      - run: git submodule update --recursive --init
       - run: ls
       - run: pwd
       - run: ls -la theme/pelican-blueidea
