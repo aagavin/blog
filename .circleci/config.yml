@@ -8,7 +8,6 @@ jobs:
       # Specify service dependencies here if necessary
       # documented at https://circleci.com/docs/2.0/circleci-images/
       - image: circleci/python:3.7.2
-      - image: circleci/node:11.0.0
     working_directory: ~/repo
     steps:
       - checkout
@@ -24,25 +23,48 @@ jobs:
             python3 -m venv venv
             . venv/bin/activate
             pip install -r requirements.txt
-      - run: git submodule sync --recursive
       - run: git submodule update --recursive --init
       - run:
           name: generate files
           command: |
             . venv/bin/activate
             make publish
-      - run:
-          name: install firebase tools
-          command: npm install -g firebase-tools
-      - run:
-          name: deploy to firebase
-          command: firebase deploy --token "$FIREBASE_TOKEN"
+#      - run:
+#          name: install firebase tools
+#          command: npm install -g firebase-tools
+#      - run:
+#          name: deploy to firebase
+#          command: firebase deploy --token "$FIREBASE_TOKEN"
 
       - save_cache:
           paths:
             - ./venv
           key: v1-dependencies-{{ checksum "requirements.txt" }}
 
-      - store_artifacts:
-          path: test-reports
-          destination: test-reports
+      - persist_to_workspace:
+          root: .
+          paths:
+            - output
+            - firebase.json
+            - '.firebaserc'
+  deploy:
+    docker:
+      - image: circleci/node:11.0.0
+    working_directory: ~/repo
+    steps:
+      - run: pwd
+      - run: ls
+      - run:
+          name: install firebase tools
+          command: npm install -g firebase-tools
+      - run:
+          name: deploy to firebase
+          command: firebase deploy --token "$FIREBASE_TOKEN"
+workflows:
+  version: 2
+  build-and-deploy:
+    jobs:
+      - build
+      - deploy:
+          requires:
+            - build
