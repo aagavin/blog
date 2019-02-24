@@ -69,12 +69,11 @@ else
 endif
 
 publish:
-	@echo $(PELICAN)
-	@echo $(INPUTDIR)
-	@echo $(OUTPUTDIR)
-	@echo $(PUBLISHCONF)
-	@echo $(PELICANOPTS)
 	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(PUBLISHCONF) $(PELICANOPTS)
+
+
+publishci:
+	$(PELICAN) $(INPUTDIR) -o $(OUTPUTDIR) -s $(PUBLISHCONF)
 
 
 .PHONY: html help clean regenerate serve serve-global devserver stopserver publish 
