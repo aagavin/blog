@@ -8,6 +8,7 @@ from __future__ import unicode_literals
 AUTHOR = 'aaron'
 SITENAME = 'aBlog'
 SITEURL = ''
+STATIC_PATHS = ['__images', 'pdfs', 'favicon.png', 'favicon.ico']
 
 PATH = 'content'
 
