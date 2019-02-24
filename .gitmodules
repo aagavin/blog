@@ -1,0 +1,6 @@
+[submodule "theme/pelican-octopress-theme"]
+	path = theme/pelican-octopress-theme
+	url = https://github.com/MrSenko/pelican-octopress-theme.git
+[submodule "theme/pelican-blueidea"]
+	path = theme/pelican-blueidea
+	url = https://github.com/nasskach/pelican-blueidea.git
