@@ -5,15 +5,11 @@ jobs:
     docker:
       # specify the version you desire here
       # use `-browsers` prefix for selenium tests, e.g. `3.6.1-browsers`
-      - image: circleci/python:3.7.2
-
       # Specify service dependencies here if necessary
-      # CircleCI maintains a library of pre-built images
       # documented at https://circleci.com/docs/2.0/circleci-images/
-      # - image: circleci/postgres:9.4
-
+      - image: circleci/python:3.7.2
+      - image: circleci/node:11.0.0
     working_directory: ~/repo
-
     steps:
       - checkout
       # Download and cache dependencies
@@ -28,22 +24,24 @@ jobs:
             python3 -m venv venv
             . venv/bin/activate
             pip install -r requirements.txt
+      - run: ls
+      - run: pwd
+      - run:
+          name: generate files
+          command: |
+            . venv/bin/activate
+            make publish
+      - run:
+          name: install firebase tools
+          command: npm install -g firebase-tools
+      - run:
+          name: deploy to firebase
+          command: firebase deploy --token "$FIREBASE_TOKEN"
 
       - save_cache:
           paths:
             - ./venv
           key: v1-dependencies-{{ checksum "requirements.txt" }}
-
-      # run tests!
-      # this example uses Django's built-in test-runner
-      # other common Python testing frameworks include pytest and nose
-      # https://pytest.org
-      # https://nose.readthedocs.io
-      - run:
-          name: run tests
-          command: |
-            . venv/bin/activate
-            python manage.py test
 
       - store_artifacts:
           path: test-reports
