@@ -23,7 +23,7 @@ CATEGORY_FEED_RSS = 'feeds/{slug}.rss.xml'
 DELETE_OUTPUT_DIRECTORY = True
 
 # Following items are often useful when publishing
-THEME = 'theme/pelican-blueidea'
+THEME = './theme/pelican-blueidea'
 DISPLAY_SEARCH_FORM = True
 DISPLAY_CATEGORIES_ON_SUBMENU = True
 #DISQUS_SITENAME = ""
