@@ -30,7 +30,7 @@ LINKS = (('Pelican', 'http://getpelican.com/'),
          ('You can modify those links in your config file', '#'),)
 
 # Social widget
-SOCIAL = ()
+SOCIAL = (('Feedburner', 'http://feeds.feedburner.com/aagavin/blog'),)
 
 DEFAULT_PAGINATION = 10
 
