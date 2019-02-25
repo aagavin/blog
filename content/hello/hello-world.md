@@ -1,5 +1,5 @@
-Title: Hello World 1
-Date: 2010-12-03 10:20
+Title: Hello World
+Date: 2019-02-24 22:10
 Category: Hello
 
-Following is a review of my favorite mechanical keyboard.
+This is the first blog post and stuff
