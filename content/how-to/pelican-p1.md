@@ -55,4 +55,8 @@ This is the content of my super blog post.
 ```
 
 pelican comes with a generated `Makefile` file which makes it easier to 
-get started. To run locally run `make devserver`!
+get started. To run locally run `make devserver`, then goto
+`http://localhost:8000`
+
+
+Look for part 2 on on setting up a theme.
