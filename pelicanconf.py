@@ -41,4 +41,5 @@ RELATIVE_URLS = True
 # https://github.com/nasskach/pelican-blueidea/
 THEME = 'theme/pelican-blueidea'
 DISPLAY_SEARCH_FORM = True
+DISPLAY_CATEGORIES_ON_MENU = False
 DISPLAY_CATEGORIES_ON_SUBMENU = True
