@@ -3,7 +3,7 @@ Date: 2019-02-26
 Category: How to
 Tags: pelican, publishing, how-to, linux
 Authors: aaron
-Summary: how to set up pelican static set
+Summary: how to set up a pelican static website
 
 
 # **What is Pelican** 
