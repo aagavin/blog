@@ -59,4 +59,4 @@ get started. To run locally run `make devserver`, then goto
 `http://localhost:8000`
 
 
-Look for part 2 on on setting up a theme.
+Look for part 2 on setting up a theme.
